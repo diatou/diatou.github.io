@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Ma roulette</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/Ma-roulette.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<p class="container">Roulette en ligne</p>
+			</nav>
+
+			<div id="entete">
+				<div class="contenu">
+					<ul>
+						<li><a href="../index.html">ACCUEIL</a></li>
+						<li><a href="Ma-roulette.html">SALLE DE JEUX</a></li>
+						<li><a href="restaurant.html">RESTAURANT</a></li>
+						<li><a href="night-club.html">NIGHT CLUB</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="../images/Ma roulette.jpg" alt="" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Bienvenue à la <strong>roulette</strong>.</h1>
+							</header>
+							<form>
+								<p>Dites si ce sera un nombre pair ou impair</p>
+								<select name="pair ou impair" id="type">
+									<optgroup>
+									<option value="Pair">Pair</option>
+									<option value="Impair">Impair</option>
+									</optgroup>
+								</select>
+								<p>Sur quel nombre voulez vous miser ?</p>
+								<select id="nombres">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+									<option>24</option>
+									<option>25</option>
+									<option>26</option>
+									<option>27</option>
+									<option>28</option>
+									<option>29</option>
+									<option>30</option>
+									<option>31</option>
+									<option>32</option>
+									<option>33</option>
+									<option>34</option>
+									<option>35</option>
+									<option>36</option>
+								</select>
+						
+								
+									<label for="Mise">Donner une mise en milliers de francs CFA</label>
+									<input type="number" id="Mise" name="Mise" required><br><br>
+									<input type="submit" id="go" value="Go !" >
+						
+								</form>
+							
+						</div>
+					</div>
+				</div>
+			</article>
+
+		
+
+
+		
+
+			<script>
+				let type =document.getElementById("type");
+				let choix1=type.selectedIndex;
+				let nombres=document.getElementById("nombres");
+				let choix2=nombres.selectedIndex;
+				let mise=document.getElementById("Mise");
+				let go=document.getElementById("go");
+				go.onclick =function roulette(choix1,choix2){
+					let resultat=Math.floor(Math.random()* (37 - 0) + 0);
+					alert("le nombre sorti est "+resultat);
+					let x = 35;
+					let y = 2 ;
+					let gain1=mise.value * x; 
+					let gain2=mise.value * y;
+					if (resultat==0){
+						alert("Vous avez perdu votre mise");
+					}else if(resultat==choix2){
+						alert ('Vous avez gagné '+ gain1 +"FCFA");
+					}else if(type.value=="Pair"){
+						switch(resultat){
+							case 2:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 4:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 6:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 8:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 10:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 12:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 14:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 16:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 18:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 20:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 22:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 24:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 26:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 28:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 30:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 32:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 34:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 36:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							default:alert("Vous avez perdu votre mise");
+						}
+					   
+							
+						
+					}else if(type.value=="Impair"){
+						switch(resultat){
+							case 1:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 3:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 5:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 7:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 9:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 11:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 13:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 15:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 17:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 19:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 21:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 23:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 25:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 27:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 29:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 31:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 33:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							case 35:alert ('Vous avez gagné '+ gain2 + "FCFA");
+							break;
+							default:alert("Vous avez perdu votre mise");
+						}
+					   
+							
+						
+					}
+				}
+				
+				
+		
+			</script>
+
+	</body>
+</html>
